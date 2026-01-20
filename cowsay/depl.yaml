@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cowsay-deployment
+  namespace: donna-cowsay
+  labels:
+    app: cowsay
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cowsay
+  template:
+    metadata:
+      labels:
+        app: cowsay
+    spec:
+      containers:
+        - name: cowsay
+          image: oci.gies.digital/donna/cowsay:latest
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: donna-regcred
