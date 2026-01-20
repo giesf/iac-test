@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cowsay-deployment
-  namespace: donna-cowsay
   labels:
     app: cowsay
 spec:
