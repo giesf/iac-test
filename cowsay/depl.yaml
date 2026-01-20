@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: cowsay
-          image: oci.gies.digital/donna/cowsay:latest
+          image: oci.gies.digital/donna/nginx:latest
           ports:
             - containerPort: 80
       imagePullSecrets:
